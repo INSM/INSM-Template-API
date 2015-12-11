@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<input>
+  <header>
+    <dataset id="Content">
+      <item type="text" id="MyText"></item>
+    </dataset>
+  </header>
+  <body>
+    <dataset id="Files">
+      <item id="StartFile" type="text">Example.dll</item>
+      <item id="FileType" type="text">WPF Template (dll)</item>
+      <item id="FileHandler" type="text">WPF Dll player</item>
+    </dataset>
+
+    <dataset id="Manifest">
+      <item id="StartFile" type="text">Example.dll</item>
+      <item id="FileType" type="text">WPF Template (dll)</item>
+      <item id="FileHandler" type="text">WPF Dll player</item>
+      <item type="text" id="Title">Example</item>
+      <item type="text" id="Type">Template</item>
+      <item type="text" id="Version">1.1.0</item>
+      <item type="text" id="Vendor">Instoremedia</item>
+      <item type="text" id="Description"></item>
+    </dataset>
+
+    <TemplateItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <TemplateFilename>Example.dll</TemplateFilename>
+      <TemplateName>Helloworld Example</TemplateName>
+      <DisplayName>Helloworld Example</DisplayName>
+      <Description>Helloworld Example</Description>
+      <TransitionEffect>Fade</TransitionEffect>
+      <IsDurationEnabled>true</IsDurationEnabled>
+      <IsTransitionsEnabled>true</IsTransitionsEnabled>
+      <Duration>30</Duration>
+      <Id>39194a85-cc50-1111-bf29-37e921f38c46</Id>
+      <DuplicateIfAlone>false</DuplicateIfAlone>
+      <Properties>
+        <Property xsi:type="TextProperty">
+          <Value>Hello World!!!!</Value>
+          <Key>MyText</Key>
+          <DisplayName>MyText</DisplayName>
+          <Advanced>false</Advanced>
+        </Property>
+
+      </Properties>
+    </TemplateItem>
+  
+  </body>
+</input>

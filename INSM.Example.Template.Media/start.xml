@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<input>
+  <header>
+    <dataset id="Content">
+      <item type="MediaFile" id="MyFile"></item>
+      <item type="text" id="OtherSetting">
+        <value>Other default value</value>
+        <description>Description of some other setting</description>
+      </item>
+    </dataset>  
+  </header>
+  <body>
+    <dataset id="Manifest">
+      <item id="Title">Media Example</item>
+      <item id="Type">Template</item>
+      <item id="Version">1.0</item>
+      <item id="Vendor">Instoremedia</item>
+      <item id="Description">Example media template</item>
+      <item id="StartFile">INSM.Example.Template.Media.dll</item>
+      <item id="FileType">WPF Template (dll)</item>
+      <item id="FileHandler">WPF Dll player</item>
+    </dataset>
+    <dataset id="Template">
+      <item id="Duration">10</item>
+      <item id="IsDurationEnabled">true</item>
+      <item id="EnableTransitions">true</item>
+      <item id="DefaultTransition">Fade</item>
+      <item id="DefaultTransitionDuration">2000</item>
+      <item id="EnableDuration">true</item>
+      <item id="DefaultDuration"></item>
+      <item id="Transitions">Fade,Swipe,Swirl</item>
+    </dataset>
+  </body>
+</input>

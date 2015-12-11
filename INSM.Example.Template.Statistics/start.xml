@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<input>
+  <header>
+  </header>
+  <body>
+    <dataset>
+      <item type="text" id="StartFile">INSM.Example.Template.Statistics.dll</item>
+      <item type="text" id="FileType">WPF Template (dll)</item>
+      <item type="text" id="FileHandler">WPF Dll player</item>
+    </dataset>
+  </body>
+</input>

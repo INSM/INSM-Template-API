@@ -1,12 +1,64 @@
 # INSM-Template-API
 Documentation and examples of the INSM Template API
 
-An Instoremedia template is an zip file containing files to render dynamic content on a screen. The zip file must contain a descriptor file called start.xml. A template may currenlty be implemented using HTML/JS or .NET/C#
+## Introduction
+
+An Instoremedia template is an zip file containing files to render dynamic content on a screen. The zip file must contain a descriptor file called start.xml. A template may currently be implemented using HTML/JS or .NET/C#
+
+
+## Features
+
+A templates main purpose it to render content. But the API provides many additional features for configuration and integration.
+
+
+### Configuration
+
+Template configuration is provided as the TemplateDataSet. The available data fields are  decalred statically in start.xml. When uploading and schduling the template on the AMS the configuration is defined, stored on the server,  transferred to players and stored locally on the player. Everytime a new dataset arrives to a player the template will receive the TemplateDataSetChanged event.
+
+### Attributes
+
+Read-only platform attributes are available as key/values and will describe the runtime environment. E.g. the current channel, region, opening hours etc.
+
+### Properties
+
+A template may generate and store data as key/values using TemplateProperties. This data is stored on the player to be used when a player restart. Properties can be defined to be shared accross multiple running instances of templates. All properties is also sent the the AMS when changed. If the property values are numeric, they will also be aggregated into statistics. The time segements for statistical data is defined by a configuration on the AMS.
+
+### Statistics
+
+Advanced statistics may be generated using the Statistics wrapper class. This may be used to measure both count and duration of generic actions by calling an API on begin and end. 
+
+### Playlog
+
+A template can record playback of individual files or datasets (assets). Multiple instances of the same file can be announced and are individually tracked. This is used for proof of play logging.
+
+### Plugins
+
+A plugin is a local running component. It works much the same way as a template but does not render anything and cannot be scheduled at times. It is used for separating integration and presentation. Normally plugins are used for integration with hardware. A plugin has a name and only on instance is allowed per plugin name. 
+
+A template may connect to a plugin to send, receive of be notified by the plugin of data as key/Values.
+
+### Commands
+
+Commands are fast volatile in memory commands sent from the AMS to players. Commands are intended to be used for temporary modifications on a template. If persistent change is desired the configuration should instead be changed using the content dataset.
+
+A command is a key/value pair that might return replay as a string or byte array.
+
+### WarpSpace
+
+Communication between templates locally or between players is done using warpspace. Each warpspace has a unique name and are isolated from each other. Currently a warpspace involving multiple players must be configured with a master IP address of one of the players but it does not matter which one. Any player can send a message to any other player, or broadcast to all players. The call can be synchronous or asynchronous. The call can have a reply if sent to a single peer. Broadcast messages cannot be replied.
+
+## Previews
+
+In most cases a template preview will be automatically generated from a headless preview player. But in some cases this will not be possible. In that case there are other options to avoid a black frame and display a relevant preview image.
+
+Configure one input file to be full screen preview.
+
+Embed an image called Preview.jpg to display a static preview image.
 
 
 ## start.xml
 
-The start.xml file has three parts:
+An Instoremedia template must contain a start.xml file. The start.xml file has three parts:
 
 * _Manifest_ - Standard meta data about this template file
 * _Template_ - Standard meta data about the template
@@ -51,3 +103,10 @@ _FilePattern_ - File extension options for VisualType browse
 _Advanced_ - True if parameter is an advanced parameter
 
 _Hidden_ - True if the parameter is hidden from the user
+
+_IsPreviewEnabled_ - True if automatic preview rendering should be attemted. If this is False and IsPreviewItemEnabled is also false the template can embedd a static file called Preview.jpg as the preview image.
+
+_IsPreviewItemEnabled_ - True if an item should be used as preview for the whole template. In this case PreviewItem must be defined
+
+_PreviewItem_ - Key of dataset item to use as preview. This must be a file.
+

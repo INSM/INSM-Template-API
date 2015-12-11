@@ -1,0 +1,7 @@
+﻿<UserControl x:Class="INSM.Example.Template.Media.MediaTemplate"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid>
+        <MediaElement Height="120" HorizontalAlignment="Left" Margin="-10,-6,0,0" Name="mediaElement1" VerticalAlignment="Top" Width="160" Stretch="UniformToFill"  LoadedBehavior="Manual" UnloadedBehavior="Manual" />
+    </Grid>
+</UserControl>

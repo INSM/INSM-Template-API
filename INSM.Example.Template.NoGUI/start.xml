@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<input>
+  <header>
+    <dataset id="Content">
+      <!-- Content dataset settings -->
+      <item type="text" id="MediaFile"></item>
+    </dataset>  
+  </header>
+  <body>
+    <dataset id="Platform">
+      <!-- Platform settings -->
+      <item id="StartFile">INSM.Example.Template.Mono.dll</item>
+      <item id="FileType">WPF Template (dll)</item>
+      <item id="FileHandler">WPF Dll player</item>
+
+      <item id="TemplateName">Media</item>
+      <item id="DisplayName">Media</item>
+      <item id="Description">Media playback template</item>
+    </dataset>
+  </body>
+</input>
