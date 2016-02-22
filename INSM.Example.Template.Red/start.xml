@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<input>
+  <header>
+    <dataset id="Content">
+    </dataset>  
+  </header>
+  <body>
+    <dataset id="Manifest">
+      <item id="Title">Color</item>
+      <item id="Type">Template</item>
+      <item id="Version">1.0</item>
+      <item id="Vendor">Instoremedia</item>
+      <item id="Description">Example Color template</item>
+      <item id="StartFile">INSM.Example.Template.Red.dll</item>
+      <item id="FileType">WPF Template (dll)</item>
+      <item id="FileHandler">WPF Dll player</item>
+    </dataset>
+    <dataset id="Template">
+      <item id="Duration">10</item>
+      <item id="IsDurationEnabled">true</item>
+      <item id="EnableTransitions">true</item>
+      <item id="DefaultTransition">Fade</item>
+      <item id="DefaultTransitionDuration">2000</item>
+      <item id="EnableDuration">true</item>
+      <item id="DefaultDuration"></item>
+      <item id="Transitions">Fade,Swipe,Swirl</item>
+    </dataset>
+  </body>
+
+  <TemplateItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <TemplateFilename>INSM.Content.Template.Red.dll</TemplateFilename>
+    <TemplateName>Color</TemplateName>
+    <DisplayName>Color</DisplayName>
+    <Description>Color</Description>
+    <TransitionEffect>Fade</TransitionEffect>
+    <IsTransitionsEnabled>false</IsTransitionsEnabled>
+    <Duration>10</Duration>
+    <IsDurationEnabled>true</IsDurationEnabled>
+    <AutoDuration>false</AutoDuration>
+    <IsAutoDurationOptionEnabled>false</IsAutoDurationOptionEnabled>
+    <DefaultProperty></DefaultProperty>
+    <IsActiveXHost>false</IsActiveXHost>
+    <Volume>1.0</Volume>
+    <IsVolumeControlEnabled>false</IsVolumeControlEnabled>
+    <DuplicateIfAlone>false</DuplicateIfAlone>
+    <Id>CD616072-C71B-4858-9536-E41C48CC7610</Id>
+    <Properties />
+  </TemplateItem>
+</input>
