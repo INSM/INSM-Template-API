@@ -27,7 +27,7 @@ namespace INSM.Example.Template.Red
         {
             InitializeComponent();
 
-            m_Template = new INSM.Template.Framework.v1.Template(null);
+            m_Template = new INSM.Template.Framework.v1.Template(new INSM.Template.Framework.v1.TemplateDataSet());
         }
 
         public API.ITemplate TemplateInstance

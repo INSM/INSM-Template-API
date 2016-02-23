@@ -28,7 +28,7 @@
   </body>
 
   <TemplateItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-    <TemplateFilename>INSM.Content.Template.Red.dll</TemplateFilename>
+    <TemplateFilename>INSM.Example.Template.Red.dll</TemplateFilename>
     <TemplateName>Color</TemplateName>
     <DisplayName>Color</DisplayName>
     <Description>Color</Description>
