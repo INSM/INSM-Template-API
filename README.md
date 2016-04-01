@@ -86,11 +86,16 @@ Visual type of parameter
        dropdown     - Option list (requires AvailableValues)
        browse       - Select a file
        colorpicker  - Choose a color
+	   playlist		- Choose a sub playlist
 
 
-### Attributes
+### Attributes (items)
 
 _DisplayName_ - Name of parameter to be displayd to the user
+
+_DisplayGroupName_ - Name of visual grouping of items
+
+_DisplayGroupId_ - Id of visual grouping of items (integer)
 
 _Required_ - True if this attribute is required from the user
 
