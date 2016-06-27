@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "INSM.Example.HTML.Template.HelloWorld", "INSM.Example.HTML.Template.HelloWorld\INSM.Example.HTML.Template.HelloWorld.csproj", "{136C51E8-45AC-4B7E-9915-B48AF7CEBC52}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "INSM.Example.HTML.Template.Information", "INSM.Example.HTML.Template.Information\INSM.Example.HTML.Template.Information.csproj", "{5B0F5C12-564F-4F5C-A46D-6E1898E4C452}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{136C51E8-45AC-4B7E-9915-B48AF7CEBC52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{136C51E8-45AC-4B7E-9915-B48AF7CEBC52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{136C51E8-45AC-4B7E-9915-B48AF7CEBC52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{136C51E8-45AC-4B7E-9915-B48AF7CEBC52}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B0F5C12-564F-4F5C-A46D-6E1898E4C452}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B0F5C12-564F-4F5C-A46D-6E1898E4C452}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B0F5C12-564F-4F5C-A46D-6E1898E4C452}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B0F5C12-564F-4F5C-A46D-6E1898E4C452}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

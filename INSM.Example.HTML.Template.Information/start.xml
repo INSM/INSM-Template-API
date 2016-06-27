@@ -2,21 +2,22 @@
 <input>
   <header>
     <dataset id="Content">
-      <item type="text" id="MyText"></item>
+      <item type="text" id="Title"></item>
+      <item type="text" id="Text"></item>
+      <item type="image" id="Image"></item>
     </dataset>
   </header>
   <body>
     <dataset id="Manifest">
-      <item id="Title">HelloWorld Example</item>
+      <item id="StartFile" type="text">index.html</item>
+      <item id="FileType" type="text">url</item>
+      <item id="FileHandler" type="text">html</item>
+      <item id="Title">Information Example</item>
       <item id="Type">Template</item>
       <item id="Version">1.1.0</item>
       <item id="Vendor">Instoremedia</item>
-      <item id="Description">Example HelloWorld template</item>
-      <item id="StartFile">INSM.Example.Template.Media.dll</item>
-      <item id="FileType">WPF Template (dll)</item>
-      <item id="FileHandler">WPF Dll player</item>
+      <item id="Description">Example information template</item>
     </dataset>
-    
     <dataset id="Template">
       <item id="Duration">10</item>
       <item id="IsDurationEnabled">true</item>
@@ -25,14 +26,14 @@
       <item id="DefaultTransitionDuration">2000</item>
       <item id="EnableDuration">true</item>
       <item id="DefaultDuration"></item>
-      <item id="Transitions">Fade,Swipe,Swirl</item>
+      <item id="Transitions">Fade</item>
     </dataset>
-    
+
     <TemplateItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-      <TemplateFilename>Example.dll</TemplateFilename>
-      <TemplateName>Helloworld Example</TemplateName>
-      <DisplayName>Helloworld Example</DisplayName>
-      <Description>Helloworld Example</Description>
+      <TemplateFilename>index.html</TemplateFilename>
+      <TemplateName>Information Example</TemplateName>
+      <DisplayName>Information Example</DisplayName>
+      <Description>Information Example</Description>
       <TransitionEffect>Fade</TransitionEffect>
       <IsDurationEnabled>true</IsDurationEnabled>
       <IsTransitionsEnabled>true</IsTransitionsEnabled>
@@ -41,13 +42,26 @@
       <DuplicateIfAlone>false</DuplicateIfAlone>
       <Properties>
         <Property xsi:type="TextProperty">
-          <Value>Hello World!!!!</Value>
-          <Key>MyText</Key>
-          <DisplayName>MyText</DisplayName>
+          <Value></Value>
+          <Key>Title</Key>
+          <DisplayName>Title</DisplayName>
           <Advanced>false</Advanced>
         </Property>
 
-      </Properties>
+        <Property xsi:type="TextProperty">
+          <Value></Value>
+          <Key>Text</Key>
+          <DisplayName>text</DisplayName>
+          <Advanced>false</Advanced>
+        </Property>
+
+        <Property xsi:type="FileProperty">
+          <Value></Value>
+          <Key>Image</Key>
+          <DisplayName>Image</DisplayName>
+          <Advanced>false</Advanced>
+        </Property>
+    </Properties>
     </TemplateItem>
   
   </body>

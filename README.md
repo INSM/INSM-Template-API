@@ -64,6 +64,21 @@ An Instoremedia template must contain a start.xml file. The start.xml file has t
 * _Template_ - Standard meta data about the template
 * _Content_ - Custom defined meta data about the dynamic parameters the template expect from a user
 
+
+## _Manifest_
+
+### Attributes (items)
+
+_Orientation_ -	Value can be “Landscape” or “Portrait”
+
+_Resolution_ - Value is pixels [width]x[height] e.g. “1920x1080”
+
+
+## _Template_
+
+
+## _Content_
+
 ### Type
 Type of parameter
 

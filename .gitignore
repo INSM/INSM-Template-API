@@ -1,0 +1,13 @@
+*.g.i.cs
+INSM.Example.Template.Green/obj/
+INSM.Example.Template.Green/bin/Debug/start.xml
+INSM.Example.Template.HelloWorld/bin/
+INSM.Example.Template.HelloWorld/obj/
+INSM.Example.Template.NoGUI/obj/
+INSM.Example.Template.Red/bin/
+INSM.Example.Template.Green/bin/
+INSM.Example.Template.Red/obj/
+INSM.Example.HTML.Template.HelloWorld/bin/
+INSM.Example.HTML.Template.HelloWorld/obj/
+INSM.Example.HTML.Template.Information/obj/
+INSM.Example.HTML.Template.Information/bin/

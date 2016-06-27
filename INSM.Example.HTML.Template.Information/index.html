@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML Information Template</title>
+    <link rel="stylesheet" type="text/css" href="template.css">
+    <link rel="import" type="text/html" href="template.html" id="template">
+</head>
+<body>
+    HTML Information Template
+    
+    <script>
+        var templateImport = document.getElementById('template');
+        var template = templateImport.import;
+        var html = template.cloneNode(true);
+        var content = html.querySelector('.template');
+        document.body.appendChild(content);
+    </script>
+</body>
+</html>
