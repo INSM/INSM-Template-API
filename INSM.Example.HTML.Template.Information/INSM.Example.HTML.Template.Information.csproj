@@ -61,7 +61,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="template.css" />
-    <Content Include="template.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

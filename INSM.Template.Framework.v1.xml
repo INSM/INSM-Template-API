@@ -34,188 +34,6 @@
             Transition mode that is supported by the template itself
             </summary>
         </member>
-        <member name="M:INSM.Template.Framework.v1.ITemplateCommand.ReportProgress(System.Single,System.String)">
-            <summary>
-            Report progress during command execution. This method can be called multiple times before result is set.
-            </summary>
-            <param name="progress">Progress between 0.0 and 1.0</param>
-            <param name="message">Message that may be displayed to user during command execution</param>
-        </member>
-        <member name="M:INSM.Template.Framework.v1.ITemplateCommand.ReturnResult(System.String)">
-            <summary>
-            Complete the command execution and return the result of the command. 
-            
-            Note that this must be called to report command completed.
-            When this is called the command is completed and should not be used anymore.
-            </summary>
-            <param name="result">Result of the command</param>
-        </member>
-        <member name="M:INSM.Template.Framework.v1.ITemplateCommand.ReturnResultAsData(System.Byte[])">
-            <summary>
-            Complete the command execution and return the result of the command as data. 
-            Use this if raw data is returned such as an image.
-            
-            Note that this must be called to report command completed.
-            When this is called the command is completed and should not be used anymore.
-            </summary>
-            <param name="result">Result of the command as data</param>        
-        </member>
-        <member name="P:INSM.Template.Framework.v1.ITemplateCommand.Key">
-            <summary>
-            Template command key
-            </summary>
-        </member>
-        <member name="P:INSM.Template.Framework.v1.ITemplateCommand.ClientId">
-            <summary>
-            Template command client id
-            </summary>
-        </member>
-        <member name="P:INSM.Template.Framework.v1.ITemplateCommand.Value">
-            <summary>
-            Template command value
-            </summary>
-        </member>
-        <member name="P:INSM.Template.Framework.v1.ITemplateCommand.ValueAsData">
-            <summary>
-            Template command value as data
-            </summary>
-        </member>
-        <member name="P:INSM.Template.Framework.v1.ITemplateCommand.Result">
-            <summary>
-            Template command result. Use ReturnResult to set.
-            </summary>
-        </member>
-        <member name="P:INSM.Template.Framework.v1.ITemplateCommand.ResultAsData">
-            <summary>
-            Template command result as data. ReturnResultAsData to set.
-            </summary>
-        </member>
-        <member name="M:INSM.Template.Framework.v1.ITemplateDataSet.Save">
-            <summary>
-            Save modifications. This will change all referenced information recursively. Only the root element needs to be saved.
-            </summary>
-        </member>
-        <member name="M:INSM.Template.Framework.v1.ITemplateDataSet.Add(INSM.Template.Framework.v1.ITemplateDataSetItem)">
-            <summary>
-            Utility method to add an item to items (with the correct key)
-            </summary>
-            <param name="item">item to be added</param>
-        </member>
-        <member name="M:INSM.Template.Framework.v1.ITemplateDataSet.Remove(INSM.Template.Framework.v1.ITemplateDataSetItem)">
-            <summary>
-            Utility method to remove an item to items (with the correct key)
-            </summary>
-            <param name="item">item to be added</param>
-        </member>
-        <member name="M:INSM.Template.Framework.v1.ITemplateDataSet.GetTemplateDataSetItemAsText(System.String)">
-            <summary>
-            Utility method to get text value from item. Will return empty string if key does not exist.
-            </summary>
-            <param name="key"></param>
-            <returns></returns>
-        </member>
-        <member name="M:INSM.Template.Framework.v1.ITemplateDataSet.GetTemplateDataSetItemAsText(System.String,System.String)">
-            <summary>
-            Utility method to get text value from item. Will return the fallback value if this item did not exist.
-            </summary>
-            <param name="key"></param>
-            <param name="fallbackValue"></param>
-            <returns></returns>
-        </member>
-        <member name="M:INSM.Template.Framework.v1.ITemplateDataSet.GetTemplateDataSetItemAsBoolean(System.String)">
-            <summary>
-            Utility method for returning a data set item as a boolean.
-            Error safe. Will return false if no value was found / could not be parsed.
-            </summary>
-            <param name="key"></param>
-            <returns></returns>
-        </member>
-        <member name="M:INSM.Template.Framework.v1.ITemplateDataSet.GetTemplateDataSetItemAsBoolean(System.String,System.Boolean)">
-            <summary>
-            Utility method for returning a data set item as a boolean.
-            Error safe. Will return the fallback value if failing.
-            </summary>
-            <param name="key"></param>
-            <param name="fallbackValue"></param>
-            <returns></returns>
-        </member>
-        <member name="M:INSM.Template.Framework.v1.ITemplateDataSet.GetTemplateDataSetItemAsInteger(System.String)">
-            <summary>
-            Utility method for returning a data set item as a integer.
-            Error safe. Will return -1 if failing.
-            </summary>
-            <param name="key"></param>
-            <returns></returns>
-        </member>
-        <member name="M:INSM.Template.Framework.v1.ITemplateDataSet.GetTemplateDataSetItemAsInteger(System.String,System.Int32)">
-            <summary>
-            Utility method for returning a data set item as a integer.
-            Error safe. Will return the fallback value if failing.
-            </summary>
-            <param name="key"></param>
-            <param name="fallbackValue"></param>
-            <returns></returns>
-        </member>
-        <member name="M:INSM.Template.Framework.v1.ITemplateDataSet.GetTemplateDataSetItemAsFile(System.String)">
-            <summary>
-            Utility method for extracting an item value as a file
-            </summary>
-            <param name="key">keyname</param>
-            <returns></returns>
-        </member>
-        <member name="P:INSM.Template.Framework.v1.ITemplateDataSet.Name">
-            <summary>
-            Name of the dataset
-            </summary>
-        </member>
-        <member name="P:INSM.Template.Framework.v1.ITemplateDataSet.Description">
-            <summary>
-            Description of the dataset
-            </summary>
-        </member>
-        <member name="P:INSM.Template.Framework.v1.ITemplateDataSet.Attributes">
-            <summary>
-            Additional attributes
-            </summary>
-        </member>
-        <member name="P:INSM.Template.Framework.v1.ITemplateDataSet.Items">
-            <summary>
-            Items in the dataset
-            </summary>
-        </member>
-        <member name="E:INSM.Template.Framework.v1.ITemplateDataSet.TemplateDataSetChanged">
-            <summary>
-            Event fired when a dataset or any sub dataset is changed including name, description and items
-            This is a legacy event with missing sender in the event handler
-            </summary>
-        </member>
-        <member name="E:INSM.Template.Framework.v1.ITemplateDataSet.TemplateDataSetChanged2">
-            <summary>
-            Event fired when a dataset or any sub dataset is changed including name, description and items
-            This replaces TemplateDataSetChanged since 3.3.6167 which is a legacy event with missing sender in the event handler
-            </summary>
-        </member>
-        <member name="E:INSM.Template.Framework.v1.ITemplateDataSet.TemplateDataSetItemAdded">
-            <summary>
-            Event fired when an item is added to a dataset
-            </summary>
-        </member>
-        <member name="E:INSM.Template.Framework.v1.ITemplateDataSet.TemplateDataSetItemChanged">
-            <summary>
-            Event fired when an item is change in a dataset (but not the sub item)
-            </summary>
-        </member>
-        <member name="E:INSM.Template.Framework.v1.ITemplateDataSet.TemplateDataSetItemRemoved">
-            <summary>
-            Event fired when an item is removed from to an dataset
-            </summary>
-        </member>
-        <member name="E:INSM.Template.Framework.v1.ITemplateDataSet.TemplateDataSetItemsChanged">
-            <summary>
-            Event fired when any items are added, changed or removed in an an dataset.
-            The event will contain all changes.
-            </summary>
-        </member>
         <member name="M:INSM.Template.Framework.v1.TemplateDataSet.Add(INSM.Template.Framework.v1.ITemplateDataSetItem)">
             <summary>
             Utility method for adding an item.
@@ -277,74 +95,9 @@
             <param name="key"></param>
             <returns></returns>
         </member>
-        <member name="P:INSM.Template.Framework.v1.ITemplateDataSetItem.Number">
-            <summary>
-            Number of the item
-            </summary>
-        </member>
-        <member name="P:INSM.Template.Framework.v1.ITemplateDataSetItem.Name">
-            <summary>
-            Key name of the item
-            </summary>
-        </member>
-        <member name="P:INSM.Template.Framework.v1.ITemplateDataSetItem.Description">
-            <summary>
-            Description of the item
-            </summary>
-        </member>
-        <member name="P:INSM.Template.Framework.v1.ITemplateDataSetItem.Tag">
+        <member name="P:INSM.Template.Framework.v1.TemplateDataSetItem.Tag">
             <summary>
             A tag that may be used internally. This will not be store permanently.
-            </summary>
-        </member>
-        <member name="P:INSM.Template.Framework.v1.ITemplateDataSetItem.Type">
-            <summary>
-            Type of item
-            </summary>
-        </member>
-        <member name="P:INSM.Template.Framework.v1.ITemplateDataSetItem.TemplateDataSet">
-            <summary>
-            Sub dataset in item. Item may have a value or a sub dataset
-            </summary>
-        </member>
-        <member name="P:INSM.Template.Framework.v1.ITemplateDataSetItem.Text">
-            <summary>
-            Value as text
-            </summary>
-        </member>
-        <member name="P:INSM.Template.Framework.v1.ITemplateDataSetItem.File">
-            <summary>
-            Value as file reference
-            </summary>
-        </member>
-        <member name="P:INSM.Template.Framework.v1.ITemplateDataSetItem.URL">
-            <summary>
-            Value as url
-            </summary>
-        </member>
-        <member name="P:INSM.Template.Framework.v1.ITemplateDataSetItem.Font">
-            <summary>
-            Value as font
-            </summary>
-        </member>
-        <member name="P:INSM.Template.Framework.v1.ITemplateDataSetItem.Color">
-            <summary>
-            Value as color
-            </summary>
-        </member>
-        <member name="P:INSM.Template.Framework.v1.ITemplateDataSetItem.NumberValue">
-            <summary>
-            Value as number
-            </summary>
-        </member>
-        <member name="P:INSM.Template.Framework.v1.ITemplateDataSetItem.BooleanValue">
-            <summary>
-            Value as boolean
-            </summary>
-        </member>
-        <member name="P:INSM.Template.Framework.v1.ITemplateDataSetItem.Attributes">
-            <summary>
-            Additional attributes of item
             </summary>
         </member>
         <member name="M:INSM.Template.Framework.v1.TemplateDataSetItem.ConvertAttributeString(System.String)">
@@ -383,199 +136,160 @@
             <param name="description">Description of the item</param>
             <param name="text">Value</param>
         </member>
-        <member name="P:INSM.Template.Framework.v1.TemplateDataSetItem.Tag">
+        <member name="P:INSM.Template.Framework.v1.TemplateObject.TemplateFile">
+            <summary>
+            Current file of this template
+            </summary>
+        </member>
+        <member name="P:INSM.Template.Framework.v1.TemplateObject.TemplateDataSet">
+            <summary>
+            Current dataset of template
+            </summary>
+        </member>
+        <member name="P:INSM.Template.Framework.v1.TemplateObject.TemplatePlaylist">
+            <summary>
+            Current playlist (if available)
+            </summary>
+        </member>
+        <member name="P:INSM.Template.Framework.v1.TemplatePlaylistItem.Tag">
             <summary>
             A tag that may be used internally. This will not be store permanently.
             </summary>
         </member>
-        <member name="T:INSM.Template.Framework.v1.ITemplateFile">
+        <member name="F:INSM.Template.Framework.v1.PlayingEventArgs.Transition">
             <summary>
-            Manage the file that the template is currently playing.
+            Transition effect. E g "Fade"
             </summary>
         </member>
-        <member name="M:INSM.Template.Framework.v1.ITemplateFile.Download">
+        <member name="F:INSM.Template.Framework.v1.PlayingEventArgs.Duration">
             <summary>
-            Download file if not available. 
-            Listen to the DownloadFileProgress event and use the absolute path when the download is finished .
+            Duration of transition in seconds
             </summary>
         </member>
-        <member name="M:INSM.Template.Framework.v1.ITemplateFile.DownloadAsync">
+        <member name="F:INSM.Template.Framework.v1.PlayingEventArgs.Tuning">
             <summary>
-            Download file if not available asynchronously. 
-            Listen to the DownloadFileProgress event and use the absolute path when the download is finished .
+            Transition effect specific tuning paramter between 0.0 and 1.0
             </summary>
         </member>
-        <member name="M:INSM.Template.Framework.v1.ITemplateFile.DownloadAsync(System.DateTime)">
+        <member name="F:INSM.Template.Framework.v1.StoppedEventArgs.Rewind">
             <summary>
-            Download file if not available asynchronously. 
-            Listen to the DownloadFileProgress event and use the absolute path when the download is finished .
+            Set if e g a move should start from beginning on next start
             </summary>
-            <param name="neededAt">Time when file will be needed</param>
         </member>
-        <member name="M:INSM.Template.Framework.v1.ITemplateFile.AbortDownload">
+        <member name="F:INSM.Template.Framework.v1.StoppingEventArgs.Transition">
             <summary>
-            Abort download if downloading asynchronously.
+            Transition effect. E g "Fade"
+            </summary>
+        </member>
+        <member name="F:INSM.Template.Framework.v1.StoppingEventArgs.Duration">
+            <summary>
+            Duration of transition in seconds
+            </summary>
+        </member>
+        <member name="F:INSM.Template.Framework.v1.StoppingEventArgs.Tuning">
+            <summary>
+            Transition effect specific tuning paramter between 0.0 and 1.0
+            </summary>
+        </member>
+        <member name="P:INSM.Template.Framework.v1.IAsynchronousTemplate.Attributes">
+            <summary>
+            Additional attributes set by the mediaplayer.
+            </summary>
+        </member>
+        <member name="P:INSM.Template.Framework.v1.IAsynchronousTemplate.TemplateFile">
+            <summary>
+            Current file of this template
+            </summary>
+        </member>
+        <member name="P:INSM.Template.Framework.v1.IAsynchronousTemplate.TemplateDataSet">
+            <summary>
+            Current dataset of template
+            </summary>
+        </member>
+        <member name="P:INSM.Template.Framework.v1.IAsynchronousTemplate.TemplatePlaylist">
+            <summary>
+            Current playlist (if available)
+            </summary>
+        </member>
+        <member name="M:INSM.Template.Framework.v1.IAsynchronousTemplate.MediaEnded">
+            <summary>
+            Signals media ended. Use to continue to next item in a playlist.
+            </summary>
+        </member>
+        <member name="M:INSM.Template.Framework.v1.IAsynchronousTemplate.KillPlayer">
+            <summary>
+            Immediately kills the player process and forces the system to restart the player (without signal media ended).
+            </summary>
+        </member>
+        <member name="M:INSM.Template.Framework.v1.IAsynchronousTemplate.Debug(INSM.Template.Framework.v1.DebugLevel,INSM.Template.Framework.v1.DebugCategory,System.String)">
+            <summary>
+            Write debug message. Output view is available in the Content Manager and/or event log.
+            Messages with level high will always be written to the event log.
+            </summary>
+            <param name="level"></param>
+            <param name="category"></param>
+            <param name="message"></param>
+        </member>
+        <member name="M:INSM.Template.Framework.v1.IAsynchronousTemplate.UploadFile(System.String)">
+            <summary>
+            Upload for to webplayer/webserver
+            </summary>
+            <param name="filename">Server filename of uploaded file</param>
+            <returns></returns>
+        </member>
+        <member name="M:INSM.Template.Framework.v1.IAsynchronousTemplate.GetFiles">
+            <summary>
+            Get accessible files for this template 
             </summary>
             <returns></returns>
         </member>
-        <member name="M:INSM.Template.Framework.v1.ITemplateFile.ExtractArchive">
+        <member name="M:INSM.Template.Framework.v1.IAsynchronousTemplate.GetPlaylists">
             <summary>
-            Verify and extract archive if file is an acrhive and extraction is needed. The path to the extracted folder
-            is available in ExtractedFileFolder.
-            
-            Returns true if file is extracted and validated
+            Get accessible playlists for this template 
             </summary>
             <returns></returns>
         </member>
-        <member name="M:INSM.Template.Framework.v1.ITemplateFile.RequestTranscode(System.String,System.String)">
+        <member name="M:INSM.Template.Framework.v1.IAsynchronousTemplate.CreatePlaylist(System.String)">
             <summary>
-            Request a transcode of the file. When the file has been transcoded the
-            TemplateFileChanged event will fire and the file will be referenced in TranscodedFileNames.
+            Create a new playlist that can be reused
             </summary>
-            <param name="mimeType">Mime type to transcode to</param>
-            <param name="ffMpegOptionsHint">FFMpeg options to use</param>
-            <returns>True if the request could be made</returns>
+            <returns></returns>
         </member>
-        <member name="M:INSM.Template.Framework.v1.ITemplateFile.AbortTranscode(System.String,System.String)">
+        <member name="M:INSM.Template.Framework.v1.IAsynchronousTemplate.DeletePlaylist(INSM.Template.Framework.v1.ITemplatePlaylist)">
             <summary>
-            Abort the transcode of the file.
+            Delete a playlist
             </summary>
-            <param name="mimeType">Mime type to transcode to</param>
-            <param name="ffMpegOptionsHint">FFMpeg options to use</param>
+            <param name="playlist"></param>
         </member>
-        <member name="E:INSM.Template.Framework.v1.ITemplateFile.DownloadFileProgress">
+        <member name="T:INSM.Template.Framework.v1.AttributeType">
             <summary>
-            Event emitted when a file progress has changed
-            </summary>
-        </member>
-        <member name="E:INSM.Template.Framework.v1.ITemplateFile.DownloadFileFinished">
-            <summary>
-            Event emitted when a file progress has downloaded successfully
-            </summary>
-        </member>
-        <member name="E:INSM.Template.Framework.v1.ITemplateFile.TemplateFileChanged">
-            <summary>
-            Event emitted when a file has been changed
-            </summary>
-        </member>
-        <member name="E:INSM.Template.Framework.v1.ITemplateFile.TemplateFileAttributesChanged">
-            <summary>
-            Event emitted when a file has been changed
-            </summary>
-        </member>
-        <member name="E:INSM.Template.Framework.v1.ITemplateFile.TemplateFileDeleted">
-            <summary>
-            Event emitted when a file has been deleted.
-            The object must not be used anymore after this event has been emitted.
-            </summary>
-        </member>
-        <member name="P:INSM.Template.Framework.v1.ITemplateFile.Name">
-            <summary>
-            Label name of the file. Usually the original filename, but will 
-            change to a unique name if the filename already exists at upload.
-            </summary>
-        </member>
-        <member name="P:INSM.Template.Framework.v1.ITemplateFile.RelativeFileName">
-            <summary>
-            Relative filename, which might be different than the 
-            original name of the file.
-            </summary>
-        </member>
-        <member name="P:INSM.Template.Framework.v1.ITemplateFile.FileName">
-            <summary>
-            Absolute filename on disk, which might be different than the 
-            original name of the file.
-            </summary>
-        </member>
-        <member name="P:INSM.Template.Framework.v1.ITemplateFile.ArchivedFileName">
-            <summary>
-            Inner archived filename if file is in a dataset item of type Archive
-            </summary>
-        </member>
-        <member name="P:INSM.Template.Framework.v1.ITemplateFile.ExtractedFileFolder">
-            <summary>
-            Extracted folder of file that is an archive. Call ExtractArchive if an archive is expected and this is not set.
-            </summary>
-        </member>
-        <member name="P:INSM.Template.Framework.v1.ITemplateFile.OriginalFileName">
-            <summary>
-            The original filename of the file when it was uploaded.
-            </summary>
-        </member>
-        <member name="P:INSM.Template.Framework.v1.ITemplateFile.Size">
-            <summary>
-            Side in bytes of the file.
-            </summary>
-        </member>
-        <member name="P:INSM.Template.Framework.v1.ITemplateFile.Width">
-            <summary>
-            Width in pixels if applicable
-            </summary>
-        </member>
-        <member name="P:INSM.Template.Framework.v1.ITemplateFile.Height">
-            <summary>
-            Height in pixels if applicable
-            </summary>
-        </member>
-        <member name="P:INSM.Template.Framework.v1.ITemplateFile.Duration">
-            <summary>
-            Duration in milliseconds if applicable
-            </summary>
-        </member>
-        <member name="P:INSM.Template.Framework.v1.ITemplateFile.Source">
-            <summary>
-            Source of the file, i.e. the origin of the file.
-            </summary>
-        </member>
-        <member name="P:INSM.Template.Framework.v1.ITemplateFile.Attributes">
-            <summary>
-            Additional attributes of the file.
-            </summary>
-        </member>
-        <member name="P:INSM.Template.Framework.v1.ITemplateFile.IsAvailable">
-            <summary>
-            Check if file is available, i.e. has been downloaded and is physically present on local player
-            </summary>
-        </member>
-        <member name="P:INSM.Template.Framework.v1.ITemplateFile.MimeType">
-            <summary>
-            Mime type of the file
-            </summary>
-        </member>
-        <member name="P:INSM.Template.Framework.v1.ITemplateFile.FFMpegOptions">
-            <summary>
-            The FFMpeg options used to generate the transcoded file
-            </summary>
-        </member>
-        <member name="P:INSM.Template.Framework.v1.ITemplateFile.IsMaster">
-            <summary>
-            True if this is a master file. False if this is a transcode of a master file.
-            </summary>
-        </member>
-        <member name="P:INSM.Template.Framework.v1.ITemplateFile.TranscodedFileNames">
-            <summary>
-            Filenames of transcoded versions of the file. Set if this file is a master file
-            </summary>
-        </member>
-        <member name="P:INSM.Template.Framework.v1.ITemplateFile.TranscodedFiles">
-            <summary>
-            ITemplateFiles of transcoded versions of the file. Set if this file is a master file
-            </summary>
-        </member>
-        <member name="P:INSM.Template.Framework.v1.ITemplateFile.MasterFilename">
-            <summary>
-            Filename of the master file if this is a transcoded file.
-            </summary>
-        </member>
-        <member name="P:INSM.Template.Framework.v1.ITemplateFile.MasterFile">
-            <summary>
-            ITemplateFile of the master file if this is a transcoded file.
+            Attributes for the template.
             </summary>
         </member>
         <member name="T:INSM.Template.Framework.v1.ITemplate">
             <summary>
             Handles the data communication between the template
             on the screen and the Instoremedia platform. 
+            </summary>
+        </member>
+        <member name="P:INSM.Template.Framework.v1.ITemplate.Attributes">
+            <summary>
+            Additional attributes set by the mediaplayer.
+            </summary>
+        </member>
+        <member name="P:INSM.Template.Framework.v1.ITemplate.TemplateFile">
+            <summary>
+            Get the file that the template is currently showing.
+            </summary>
+        </member>
+        <member name="P:INSM.Template.Framework.v1.ITemplate.TemplateDataSet">
+            <summary>
+            Get the dataset that the template is currently using.
+            </summary>
+        </member>
+        <member name="P:INSM.Template.Framework.v1.ITemplate.TemplatePlaylist">
+            <summary>
+            Current playlist (if available).
             </summary>
         </member>
         <member name="M:INSM.Template.Framework.v1.ITemplate.MediaEnded">
@@ -602,6 +316,16 @@
             </summary>
             <returns>All the template properties.</returns>
         </member>
+        <member name="P:INSM.Template.Framework.v1.ITemplate.IsWebPlayer">
+            <summary>
+            Check whether the template is a web player template or not.
+            </summary>
+        </member>
+        <member name="P:INSM.Template.Framework.v1.ITemplate.IsPreviewPlayer">
+            <summary>
+            Check whether the template is a preview template or not.
+            </summary>
+        </member>
         <member name="M:INSM.Template.Framework.v1.ITemplate.Debug(INSM.Template.Framework.v1.DebugLevel,INSM.Template.Framework.v1.DebugCategory,System.String)">
             <summary>
             Write a debug message. The output view is available in the Content Manager and/or event log.
@@ -610,6 +334,12 @@
             <param name="level">Debug message level. Can be one of "Low", "Medium", or "High".</param>
             <param name="category">Debug category.</param>
             <param name="message">Debug message.</param>
+        </member>
+        <member name="P:INSM.Template.Framework.v1.ITemplate.State">
+            <summary>
+            Get teh current state of the template (read-only). 
+            Use SetState() to change the state.
+            </summary>
         </member>
         <member name="M:INSM.Template.Framework.v1.ITemplate.RegisterState(System.String,System.Int32)">
             <summary>
@@ -750,7 +480,7 @@
             <summary>
             Get file using relative filenames.
             </summary>
-            <param name="relativeFilename">Relative filenames</param>
+            <param name="relativeFilenames">Relative filenames</param>
             <returns>The file.</returns>
         </member>
         <member name="M:INSM.Template.Framework.v1.ITemplate.GetFiles">
@@ -799,7 +529,7 @@
             Get the warpspace by master IP with Id
             </summary>
             <param name="name">Warpspace name.</param>
-            <param name="masterIp">IP of warpspace master peer</param>
+            <param name="masterIP">IP of warpspace master peer</param>
             <param name="myId">Id to identify this peer</param>
             <returns></returns>
         </member>
@@ -852,43 +582,7 @@
             <summary>
             Report playback of dataset has ended.
             </summary>
-            <param name="dataSet">Ticket of dataset no longer playing</param>
-        </member>
-        <member name="P:INSM.Template.Framework.v1.ITemplate.Attributes">
-            <summary>
-            Additional attributes set by the mediaplayer.
-            </summary>
-        </member>
-        <member name="P:INSM.Template.Framework.v1.ITemplate.TemplateFile">
-            <summary>
-            Get the file that the template is currently showing.
-            </summary>
-        </member>
-        <member name="P:INSM.Template.Framework.v1.ITemplate.TemplateDataSet">
-            <summary>
-            Get the dataset that the template is currently using.
-            </summary>
-        </member>
-        <member name="P:INSM.Template.Framework.v1.ITemplate.TemplatePlaylist">
-            <summary>
-            Current playlist (if available).
-            </summary>
-        </member>
-        <member name="P:INSM.Template.Framework.v1.ITemplate.IsWebPlayer">
-            <summary>
-            Check whether the template is a web player template or not.
-            </summary>
-        </member>
-        <member name="P:INSM.Template.Framework.v1.ITemplate.IsPreviewPlayer">
-            <summary>
-            Check whether the template is a preview template or not.
-            </summary>
-        </member>
-        <member name="P:INSM.Template.Framework.v1.ITemplate.State">
-            <summary>
-            Get teh current state of the template (read-only). 
-            Use SetState() to change the state.
-            </summary>
+            <param name="ticket">Ticket of dataset no longer playing</param>
         </member>
         <member name="E:INSM.Template.Framework.v1.ITemplate.TemplateLoaded">
             <summary>
@@ -988,29 +682,460 @@
             This is intended for final test stages in live environment.
             </summary>
         </member>
-        <member name="P:INSM.Template.Framework.v1.TemplateObject.TemplateFile">
+        <member name="P:INSM.Template.Framework.v1.ITemplateCommand.Key">
             <summary>
-            Current file of this template
+            Template command key
             </summary>
         </member>
-        <member name="P:INSM.Template.Framework.v1.TemplateObject.TemplateDataSet">
+        <member name="P:INSM.Template.Framework.v1.ITemplateCommand.ClientId">
             <summary>
-            Current dataset of template
+            Template command client id
             </summary>
         </member>
-        <member name="P:INSM.Template.Framework.v1.TemplateObject.TemplatePlaylist">
+        <member name="P:INSM.Template.Framework.v1.ITemplateCommand.Value">
             <summary>
-            Current playlist (if available)
+            Template command value
             </summary>
+        </member>
+        <member name="P:INSM.Template.Framework.v1.ITemplateCommand.ValueAsData">
+            <summary>
+            Template command value as data
+            </summary>
+        </member>
+        <member name="P:INSM.Template.Framework.v1.ITemplateCommand.Result">
+            <summary>
+            Template command result. Use ReturnResult to set.
+            </summary>
+        </member>
+        <member name="P:INSM.Template.Framework.v1.ITemplateCommand.ResultAsData">
+            <summary>
+            Template command result as data. ReturnResultAsData to set.
+            </summary>
+        </member>
+        <member name="M:INSM.Template.Framework.v1.ITemplateCommand.ReportProgress(System.Single,System.String)">
+            <summary>
+            Report progress during command execution. This method can be called multiple times before result is set.
+            </summary>
+            <param name="progress">Progress between 0.0 and 1.0</param>
+            <param name="message">Message that may be displayed to user during command execution</param>
+        </member>
+        <member name="M:INSM.Template.Framework.v1.ITemplateCommand.ReturnResult(System.String)">
+            <summary>
+            Complete the command execution and return the result of the command. 
+            
+            Note that this must be called to report command completed.
+            When this is called the command is completed and should not be used anymore.
+            </summary>
+            <param name="result">Result of the command</param>
+        </member>
+        <member name="M:INSM.Template.Framework.v1.ITemplateCommand.ReturnResultAsData(System.Byte[])">
+            <summary>
+            Complete the command execution and return the result of the command as data. 
+            Use this if raw data is returned such as an image.
+            
+            Note that this must be called to report command completed.
+            When this is called the command is completed and should not be used anymore.
+            </summary>
+            <param name="data">Result of the command as data</param>        
+        </member>
+        <member name="T:INSM.Template.Framework.v1.ITemplateControl">
+            <summary>
+            This interface should be implemented by the user control that contains the template objects.
+            </summary>
+        </member>
+        <member name="P:INSM.Template.Framework.v1.ITemplateDataSet.Name">
+            <summary>
+            Name of the dataset
+            </summary>
+        </member>
+        <member name="P:INSM.Template.Framework.v1.ITemplateDataSet.Description">
+            <summary>
+            Description of the dataset
+            </summary>
+        </member>
+        <member name="P:INSM.Template.Framework.v1.ITemplateDataSet.Attributes">
+            <summary>
+            Additional attributes
+            </summary>
+        </member>
+        <member name="P:INSM.Template.Framework.v1.ITemplateDataSet.Items">
+            <summary>
+            Items in the dataset
+            </summary>
+        </member>
+        <member name="M:INSM.Template.Framework.v1.ITemplateDataSet.Save">
+            <summary>
+            Save modifications. This will change all referenced information recursively. Only the root element needs to be saved.
+            </summary>
+        </member>
+        <member name="M:INSM.Template.Framework.v1.ITemplateDataSet.Add(INSM.Template.Framework.v1.ITemplateDataSetItem)">
+            <summary>
+            Utility method to add an item to items (with the correct key)
+            </summary>
+            <param name="item">item to be added</param>
+        </member>
+        <member name="M:INSM.Template.Framework.v1.ITemplateDataSet.Remove(INSM.Template.Framework.v1.ITemplateDataSetItem)">
+            <summary>
+            Utility method to remove an item to items (with the correct key)
+            </summary>
+            <param name="item">item to be added</param>
+        </member>
+        <member name="M:INSM.Template.Framework.v1.ITemplateDataSet.GetTemplateDataSetItemAsText(System.String)">
+            <summary>
+            Utility method to get text value from item. Will return empty string if key does not exist.
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:INSM.Template.Framework.v1.ITemplateDataSet.GetTemplateDataSetItemAsText(System.String,System.String)">
+            <summary>
+            Utility method to get text value from item. Will return the fallback value if this item did not exist.
+            </summary>
+            <param name="key"></param>
+            <param name="fallbackValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:INSM.Template.Framework.v1.ITemplateDataSet.GetTemplateDataSetItemAsBoolean(System.String)">
+            <summary>
+            Utility method for returning a data set item as a boolean.
+            Error safe. Will return false if no value was found / could not be parsed.
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:INSM.Template.Framework.v1.ITemplateDataSet.GetTemplateDataSetItemAsBoolean(System.String,System.Boolean)">
+            <summary>
+            Utility method for returning a data set item as a boolean.
+            Error safe. Will return the fallback value if failing.
+            </summary>
+            <param name="key"></param>
+            <param name="fallbackValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:INSM.Template.Framework.v1.ITemplateDataSet.GetTemplateDataSetItemAsInteger(System.String)">
+            <summary>
+            Utility method for returning a data set item as a integer.
+            Error safe. Will return -1 if failing.
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:INSM.Template.Framework.v1.ITemplateDataSet.GetTemplateDataSetItemAsInteger(System.String,System.Int32)">
+            <summary>
+            Utility method for returning a data set item as a integer.
+            Error safe. Will return the fallback value if failing.
+            </summary>
+            <param name="key"></param>
+            <param name="fallbackValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:INSM.Template.Framework.v1.ITemplateDataSet.GetTemplateDataSetItemAsFile(System.String)">
+            <summary>
+            Utility method for extracting an item value as a file
+            </summary>
+            <param name="key">keyname</param>
+            <returns></returns>
+        </member>
+        <member name="E:INSM.Template.Framework.v1.ITemplateDataSet.TemplateDataSetChanged">
+            <summary>
+            Event fired when a dataset or any sub dataset is changed including name, description and items
+            This is a legacy event with missing sender in the event handler
+            </summary>
+        </member>
+        <member name="E:INSM.Template.Framework.v1.ITemplateDataSet.TemplateDataSetChanged2">
+            <summary>
+            Event fired when a dataset or any sub dataset is changed including name, description and items
+            This replaces TemplateDataSetChanged since 3.3.6167 which is a legacy event with missing sender in the event handler
+            </summary>
+        </member>
+        <member name="E:INSM.Template.Framework.v1.ITemplateDataSet.TemplateDataSetItemAdded">
+            <summary>
+            Event fired when an item is added to a dataset
+            </summary>
+        </member>
+        <member name="E:INSM.Template.Framework.v1.ITemplateDataSet.TemplateDataSetItemChanged">
+            <summary>
+            Event fired when an item is change in a dataset (but not the sub item)
+            </summary>
+        </member>
+        <member name="E:INSM.Template.Framework.v1.ITemplateDataSet.TemplateDataSetItemRemoved">
+            <summary>
+            Event fired when an item is removed from to an dataset
+            </summary>
+        </member>
+        <member name="E:INSM.Template.Framework.v1.ITemplateDataSet.TemplateDataSetItemsChanged">
+            <summary>
+            Event fired when any items are added, changed or removed in an an dataset.
+            The event will contain all changes.
+            </summary>
+        </member>
+        <member name="T:INSM.Template.Framework.v1.TemplateDataSetItemType">
+            <summary>
+            Supported Dataset items type. 
+            </summary>
+        </member>
+        <member name="T:INSM.Template.Framework.v1.TemplateDataSetItemAttributeType">
+            <summary>
+            Pre-defined attributes
+            </summary>
+        </member>
+        <member name="P:INSM.Template.Framework.v1.ITemplateDataSetItem.Number">
+            <summary>
+            Number of the item
+            </summary>
+        </member>
+        <member name="P:INSM.Template.Framework.v1.ITemplateDataSetItem.Name">
+            <summary>
+            Key name of the item
+            </summary>
+        </member>
+        <member name="P:INSM.Template.Framework.v1.ITemplateDataSetItem.Description">
+            <summary>
+            Description of the item
+            </summary>
+        </member>
+        <member name="P:INSM.Template.Framework.v1.ITemplateDataSetItem.Tag">
+            <summary>
+            A tag that may be used internally. This will not be store permanently.
+            </summary>
+        </member>
+        <member name="P:INSM.Template.Framework.v1.ITemplateDataSetItem.Type">
+            <summary>
+            Type of item
+            </summary>
+        </member>
+        <member name="P:INSM.Template.Framework.v1.ITemplateDataSetItem.TemplateDataSet">
+            <summary>
+            Sub dataset in item. Item may have a value or a sub dataset
+            </summary>
+        </member>
+        <member name="P:INSM.Template.Framework.v1.ITemplateDataSetItem.Text">
+            <summary>
+            Value as text
+            </summary>
+        </member>
+        <member name="P:INSM.Template.Framework.v1.ITemplateDataSetItem.File">
+            <summary>
+            Value as file reference
+            </summary>
+        </member>
+        <member name="P:INSM.Template.Framework.v1.ITemplateDataSetItem.URL">
+            <summary>
+            Value as url
+            </summary>
+        </member>
+        <member name="P:INSM.Template.Framework.v1.ITemplateDataSetItem.Font">
+            <summary>
+            Value as font
+            </summary>
+        </member>
+        <member name="P:INSM.Template.Framework.v1.ITemplateDataSetItem.Color">
+            <summary>
+            Value as color
+            </summary>
+        </member>
+        <member name="P:INSM.Template.Framework.v1.ITemplateDataSetItem.NumberValue">
+            <summary>
+            Value as number
+            </summary>
+        </member>
+        <member name="P:INSM.Template.Framework.v1.ITemplateDataSetItem.BooleanValue">
+            <summary>
+            Value as boolean
+            </summary>
+        </member>
+        <member name="P:INSM.Template.Framework.v1.ITemplateDataSetItem.Attributes">
+            <summary>
+            Additional attributes of item
+            </summary>
+        </member>
+        <member name="T:INSM.Template.Framework.v1.ITemplateFile">
+            <summary>
+            Manage the file that the template is currently playing.
+            </summary>
+        </member>
+        <member name="E:INSM.Template.Framework.v1.ITemplateFile.DownloadFileProgress">
+            <summary>
+            Event emitted when a file progress has changed
+            </summary>
+        </member>
+        <member name="E:INSM.Template.Framework.v1.ITemplateFile.DownloadFileFinished">
+            <summary>
+            Event emitted when a file progress has downloaded successfully
+            </summary>
+        </member>
+        <member name="E:INSM.Template.Framework.v1.ITemplateFile.TemplateFileChanged">
+            <summary>
+            Event emitted when a file has been changed
+            </summary>
+        </member>
+        <member name="E:INSM.Template.Framework.v1.ITemplateFile.TemplateFileAttributesChanged">
+            <summary>
+            Event emitted when a file has been changed
+            </summary>
+        </member>
+        <member name="E:INSM.Template.Framework.v1.ITemplateFile.TemplateFileDeleted">
+            <summary>
+            Event emitted when a file has been deleted.
+            The object must not be used anymore after this event has been emitted.
+            </summary>
+        </member>
+        <member name="P:INSM.Template.Framework.v1.ITemplateFile.Name">
+            <summary>
+            Label name of the file. Usually the original filename, but will 
+            change to a unique name if the filename already exists at upload.
+            </summary>
+        </member>
+        <member name="P:INSM.Template.Framework.v1.ITemplateFile.RelativeFileName">
+            <summary>
+            Relative filename, which might be different than the 
+            original name of the file.
+            </summary>
+        </member>
+        <member name="P:INSM.Template.Framework.v1.ITemplateFile.FileName">
+            <summary>
+            Absolute filename on disk, which might be different than the 
+            original name of the file.
+            </summary>
+        </member>
+        <member name="P:INSM.Template.Framework.v1.ITemplateFile.ArchivedFileName">
+            <summary>
+            Inner archived filename if file is in a dataset item of type Archive
+            </summary>
+        </member>
+        <member name="P:INSM.Template.Framework.v1.ITemplateFile.ExtractedFileFolder">
+            <summary>
+            Extracted folder of file that is an archive. Call ExtractArchive if an archive is expected and this is not set.
+            </summary>
+        </member>
+        <member name="P:INSM.Template.Framework.v1.ITemplateFile.OriginalFileName">
+            <summary>
+            The original filename of the file when it was uploaded.
+            </summary>
+        </member>
+        <member name="P:INSM.Template.Framework.v1.ITemplateFile.Size">
+            <summary>
+            Side in bytes of the file.
+            </summary>
+        </member>
+        <member name="P:INSM.Template.Framework.v1.ITemplateFile.Width">
+            <summary>
+            Width in pixels if applicable
+            </summary>
+        </member>
+        <member name="P:INSM.Template.Framework.v1.ITemplateFile.Height">
+            <summary>
+            Height in pixels if applicable
+            </summary>
+        </member>
+        <member name="P:INSM.Template.Framework.v1.ITemplateFile.Duration">
+            <summary>
+            Duration in milliseconds if applicable
+            </summary>
+        </member>
+        <member name="P:INSM.Template.Framework.v1.ITemplateFile.Source">
+            <summary>
+            Source of the file, i.e. the origin of the file.
+            </summary>
+        </member>
+        <member name="P:INSM.Template.Framework.v1.ITemplateFile.Attributes">
+            <summary>
+            Additional attributes of the file.
+            </summary>
+        </member>
+        <member name="P:INSM.Template.Framework.v1.ITemplateFile.IsAvailable">
+            <summary>
+            Check if file is available, i.e. has been downloaded and is physically present on local player
+            </summary>
+        </member>
+        <member name="P:INSM.Template.Framework.v1.ITemplateFile.MimeType">
+            <summary>
+            Mime type of the file
+            </summary>
+        </member>
+        <member name="P:INSM.Template.Framework.v1.ITemplateFile.FFMpegOptions">
+            <summary>
+            The FFMpeg options used to generate the transcoded file
+            </summary>
+        </member>
+        <member name="P:INSM.Template.Framework.v1.ITemplateFile.IsMaster">
+            <summary>
+            True if this is a master file. False if this is a transcode of a master file.
+            </summary>
+        </member>
+        <member name="P:INSM.Template.Framework.v1.ITemplateFile.TranscodedFileNames">
+            <summary>
+            Filenames of transcoded versions of the file. Set if this file is a master file
+            </summary>
+        </member>
+        <member name="P:INSM.Template.Framework.v1.ITemplateFile.TranscodedFiles">
+            <summary>
+            ITemplateFiles of transcoded versions of the file. Set if this file is a master file
+            </summary>
+        </member>
+        <member name="P:INSM.Template.Framework.v1.ITemplateFile.MasterFilename">
+            <summary>
+            Filename of the master file if this is a transcoded file.
+            </summary>
+        </member>
+        <member name="P:INSM.Template.Framework.v1.ITemplateFile.MasterFile">
+            <summary>
+            ITemplateFile of the master file if this is a transcoded file.
+            </summary>
+        </member>
+        <member name="M:INSM.Template.Framework.v1.ITemplateFile.Download">
+            <summary>
+            Download file if not available. 
+            Listen to the DownloadFileProgress event and use the absolute path when the download is finished .
+            </summary>
+        </member>
+        <member name="M:INSM.Template.Framework.v1.ITemplateFile.DownloadAsync">
+            <summary>
+            Download file if not available asynchronously. 
+            Listen to the DownloadFileProgress event and use the absolute path when the download is finished .
+            </summary>
+        </member>
+        <member name="M:INSM.Template.Framework.v1.ITemplateFile.DownloadAsync(System.DateTime)">
+            <summary>
+            Download file if not available asynchronously. 
+            Listen to the DownloadFileProgress event and use the absolute path when the download is finished .
+            </summary>
+            <param name="neededAt">Time when file will be needed</param>
+        </member>
+        <member name="M:INSM.Template.Framework.v1.ITemplateFile.AbortDownload">
+            <summary>
+            Abort download if downloading asynchronously.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:INSM.Template.Framework.v1.ITemplateFile.ExtractArchive">
+            <summary>
+            Verify and extract archive if file is an acrhive and extraction is needed. The path to the extracted folder
+            is available in ExtractedFileFolder.
+            
+            Returns true if file is extracted and validated
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:INSM.Template.Framework.v1.ITemplateFile.RequestTranscode(System.String,System.String)">
+            <summary>
+            Request a transcode of the file. When the file has been transcoded the
+            TemplateFileChanged event will fire and the file will be referenced in TranscodedFileNames.
+            </summary>
+            <param name="mimeType">Mime type to transcode to</param>
+            <param name="ffMpegOptions">FFMpeg options to use</param>
+            <returns>True if the request could be made</returns>
+        </member>
+        <member name="M:INSM.Template.Framework.v1.ITemplateFile.AbortTranscode(System.String,System.String)">
+            <summary>
+            Abort the transcode of the file.
+            </summary>
+            <param name="mimeType">Mime type to transcode to</param>
+            <param name="ffMpegOptions">FFMpeg options to use</param>
         </member>
         <member name="T:INSM.Template.Framework.v1.ITemplatePlaylist">
             <summary>
             Manage the template playlist.
-            </summary>
-        </member>
-        <member name="M:INSM.Template.Framework.v1.ITemplatePlaylist.Save">
-            <summary>
-            Save modifications. This will change all referenced information recursively. Only the root element needs to be saved.
             </summary>
         </member>
         <member name="P:INSM.Template.Framework.v1.ITemplatePlaylist.Name">
@@ -1031,6 +1156,11 @@
         <member name="P:INSM.Template.Framework.v1.ITemplatePlaylist.Items">
             <summary>
             Items in playlist
+            </summary>
+        </member>
+        <member name="M:INSM.Template.Framework.v1.ITemplatePlaylist.Save">
+            <summary>
+            Save modifications. This will change all referenced information recursively. Only the root element needs to be saved.
             </summary>
         </member>
         <member name="P:INSM.Template.Framework.v1.ITemplatePlaylistItem.Number">
@@ -1061,20 +1191,9 @@
             Additional attributes of the playlists item
             </summary>
         </member>
-        <member name="P:INSM.Template.Framework.v1.TemplatePlaylistItem.Tag">
-            <summary>
-            A tag that may be used internally. This will not be store permanently.
-            </summary>
-        </member>
         <member name="T:INSM.Template.Framework.v1.ITemplateProperty">
             <summary>
             Manages template properties.
-            </summary>
-        </member>
-        <member name="M:INSM.Template.Framework.v1.ITemplateProperty.Save">
-            <summary>
-            Save modifications. This will change all referenced information recursively.
-            Only the root element needs to be saved.
             </summary>
         </member>
         <member name="E:INSM.Template.Framework.v1.ITemplateProperty.TemplatePropertyChanged">
@@ -1116,129 +1235,10 @@
             between templates.</para>
             </summary>
         </member>
-        <member name="F:INSM.Template.Framework.v1.PlayingEventArgs.Transition">
+        <member name="M:INSM.Template.Framework.v1.ITemplateProperty.Save">
             <summary>
-            Transition effect. E g "Fade"
-            </summary>
-        </member>
-        <member name="F:INSM.Template.Framework.v1.PlayingEventArgs.Duration">
-            <summary>
-            Duration of transition in seconds
-            </summary>
-        </member>
-        <member name="F:INSM.Template.Framework.v1.PlayingEventArgs.Tuning">
-            <summary>
-            Transition effect specific tuning paramter between 0.0 and 1.0
-            </summary>
-        </member>
-        <member name="F:INSM.Template.Framework.v1.StoppedEventArgs.Rewind">
-            <summary>
-            Set if e g a move should start from beginning on next start
-            </summary>
-        </member>
-        <member name="F:INSM.Template.Framework.v1.StoppingEventArgs.Transition">
-            <summary>
-            Transition effect. E g "Fade"
-            </summary>
-        </member>
-        <member name="F:INSM.Template.Framework.v1.StoppingEventArgs.Duration">
-            <summary>
-            Duration of transition in seconds
-            </summary>
-        </member>
-        <member name="F:INSM.Template.Framework.v1.StoppingEventArgs.Tuning">
-            <summary>
-            Transition effect specific tuning paramter between 0.0 and 1.0
-            </summary>
-        </member>
-        <member name="M:INSM.Template.Framework.v1.IAsynchronousTemplate.MediaEnded">
-            <summary>
-            Signals media ended. Use to continue to next item in a playlist.
-            </summary>
-        </member>
-        <member name="M:INSM.Template.Framework.v1.IAsynchronousTemplate.KillPlayer">
-            <summary>
-            Immediately kills the player process and forces the system to restart the player (without signal media ended).
-            </summary>
-        </member>
-        <member name="M:INSM.Template.Framework.v1.IAsynchronousTemplate.Debug(INSM.Template.Framework.v1.DebugLevel,INSM.Template.Framework.v1.DebugCategory,System.String)">
-            <summary>
-            Write debug message. Output view is available in the Content Manager and/or event log.
-            Messages with level high will always be written to the event log.
-            </summary>
-            <param name="level"></param>
-            <param name="category"></param>
-            <param name="message"></param>
-        </member>
-        <member name="M:INSM.Template.Framework.v1.IAsynchronousTemplate.UploadFile(System.String)">
-            <summary>
-            Upload for to webplayer/webserver
-            </summary>
-            <param name="filename">Server filename of uploaded file</param>
-            <returns></returns>
-        </member>
-        <member name="M:INSM.Template.Framework.v1.IAsynchronousTemplate.GetFiles">
-            <summary>
-            Get accessible files for this template 
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="M:INSM.Template.Framework.v1.IAsynchronousTemplate.GetPlaylists">
-            <summary>
-            Get accessible playlists for this template 
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="M:INSM.Template.Framework.v1.IAsynchronousTemplate.CreatePlaylist(System.String)">
-            <summary>
-            Create a new playlist that can be reused
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="M:INSM.Template.Framework.v1.IAsynchronousTemplate.DeletePlaylist(INSM.Template.Framework.v1.ITemplatePlaylist)">
-            <summary>
-            Delete a playlist
-            </summary>
-            <param name="playlist"></param>
-        </member>
-        <member name="P:INSM.Template.Framework.v1.IAsynchronousTemplate.Attributes">
-            <summary>
-            Additional attributes set by the mediaplayer.
-            </summary>
-        </member>
-        <member name="P:INSM.Template.Framework.v1.IAsynchronousTemplate.TemplateFile">
-            <summary>
-            Current file of this template
-            </summary>
-        </member>
-        <member name="P:INSM.Template.Framework.v1.IAsynchronousTemplate.TemplateDataSet">
-            <summary>
-            Current dataset of template
-            </summary>
-        </member>
-        <member name="P:INSM.Template.Framework.v1.IAsynchronousTemplate.TemplatePlaylist">
-            <summary>
-            Current playlist (if available)
-            </summary>
-        </member>
-        <member name="T:INSM.Template.Framework.v1.AttributeType">
-            <summary>
-            Attributes for the template.
-            </summary>
-        </member>
-        <member name="T:INSM.Template.Framework.v1.ITemplateControl">
-            <summary>
-            This interface should be implemented by the user control that contains the template objects.
-            </summary>
-        </member>
-        <member name="T:INSM.Template.Framework.v1.TemplateDataSetItemType">
-            <summary>
-            Supported Dataset items type. 
-            </summary>
-        </member>
-        <member name="T:INSM.Template.Framework.v1.TemplateDataSetItemAttributeType">
-            <summary>
-            Pre-defined attributes
+            Save modifications. This will change all referenced information recursively.
+            Only the root element needs to be saved.
             </summary>
         </member>
         <member name="T:INSM.Template.Framework.v1.IWarpSpace">
@@ -1267,6 +1267,26 @@
             
             example code...
             </example>
+        </member>
+        <member name="P:INSM.Template.Framework.v1.IWarpSpace.Name">
+            <summary>
+            Name of this warpspace.
+            </summary>
+        </member>
+        <member name="P:INSM.Template.Framework.v1.IWarpSpace.MyId">
+            <summary>
+            Master template ID.
+            </summary>
+        </member>
+        <member name="P:INSM.Template.Framework.v1.IWarpSpace.MasterIp">
+            <summary>
+            Master template IP.
+            </summary>
+        </member>
+        <member name="P:INSM.Template.Framework.v1.IWarpSpace.IsMaster">
+            <summary>
+            Check if the current template is the master template.
+            </summary>
         </member>
         <member name="M:INSM.Template.Framework.v1.IWarpSpace.SendMessageToPeer(System.String,System.String,System.String,System.String)">
             <summary>
@@ -1341,25 +1361,18 @@
             <param name="id">Peer ID.</param>
             <returns>True if the client can be reached.</returns>
         </member>
-        <member name="P:INSM.Template.Framework.v1.IWarpSpace.Name">
+        <member name="M:INSM.Template.Framework.v1.Statistics.RingBuffer`1.#ctor(System.Int32)">
             <summary>
-            Name of this warpspace.
+            Constructs ringbuffer with maxitems. 
             </summary>
+            <param name="maxItems">n of items in ringbuffer</param>
         </member>
-        <member name="P:INSM.Template.Framework.v1.IWarpSpace.MyId">
+        <member name="M:INSM.Template.Framework.v1.Statistics.RingBuffer`1.AllItemsToString(System.String)">
             <summary>
-            Master template ID.
+            Return a string with items as time|name[demarker]time|name ...
             </summary>
-        </member>
-        <member name="P:INSM.Template.Framework.v1.IWarpSpace.MasterIp">
-            <summary>
-            Master template IP.
-            </summary>
-        </member>
-        <member name="P:INSM.Template.Framework.v1.IWarpSpace.IsMaster">
-            <summary>
-            Check if the current template is the master template.
-            </summary>
+            <param name="demarker"></param>
+            <returns></returns>
         </member>
         <member name="M:INSM.Template.Framework.v1.Statistics.#ctor(INSM.Template.Framework.v1.ITemplate)">
             <summary>
@@ -1393,7 +1406,7 @@
                 * Calculates relative time used per action 
                 * Saves start and stop timestamps for future use in list
             </summary>
-            <param name="input">key name of the action</param>
+            <param name="action">key name of the action</param>
         </member>
         <member name="M:INSM.Template.Framework.v1.Statistics.EndAction(System.String,System.TimeSpan)">
             <summary>
@@ -1420,25 +1433,87 @@
             commits and empties all collected data
             </summary>
         </member>
-        <member name="M:INSM.Template.Framework.v1.Statistics.RingBuffer`1.#ctor(System.Int32)">
-            <summary>
-            Constructs ringbuffer with maxitems. 
-            </summary>
-            <param name="maxItems">n of items in ringbuffer</param>
-        </member>
-        <member name="M:INSM.Template.Framework.v1.Statistics.RingBuffer`1.AllItemsToString(System.String)">
-            <summary>
-            Return a string with items as time|name[demarker]time|name ...
-            </summary>
-            <param name="demarker"></param>
-            <returns></returns>
-        </member>
         <member name="T:INSM.Template.Framework.v1.Template">
             <summary>
             This class should be used by any WPF template that wants to use the Template API.
             It inherits TemplateBase and should be easier to work with instead of creating 
             your own template file that inherits TemplateBase.
             </summary>
+        </member>
+        <member name="T:INSM.Template.Framework.v1.TemplateContext">
+            <summary>
+            Extended Template API. Thic class can be used as a base class instead of Template.
+            </summary>
+        </member>
+        <member name="M:INSM.Template.Framework.v1.TemplateContext.InvokeOnAllSubTemplates(System.Action{INSM.Template.Framework.v1.ITemplateContext})">
+            <summary>
+            Helper method for invoking method calls on all sub templates.
+            </summary>
+        </member>
+        <member name="M:INSM.Template.Framework.v1.TemplateContext.RetrieveDefaultTemplateData">
+            <summary>
+            Called by the ContentManager to ask the template for it's desired DataSet. The keys (with attributes) will describe the
+            requested variables and the values serves as default data.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:INSM.Template.Framework.v1.TemplateContext.InsertTemplateData(System.Object)">
+            <summary>
+            Called by the player to fill the template with data and to update a running template with new data. The template should handle this gracefully.
+            </summary>
+            <param name="serializedDataSet"></param>
+        </member>
+        <member name="M:INSM.Template.Framework.v1.TemplateContext.InsertPlaylist(System.Object)">
+            <summary>
+            Called by the player to fill the template with the playlist it should display. The template should handle this gracefully.
+            Return true if the template can handle the playlist. Otherwise it should return false.
+            </summary>
+            <param name="serializedPlaylist"></param>
+            <returns>true if template accepts the playlist</returns>
+        </member>
+        <member name="M:INSM.Template.Framework.v1.TemplateContext.PropertyChange(System.Object)">
+            <summary>
+            Called when a propery is changed from the system
+            </summary>
+            <param name="serializedProperty"></param>
+        </member>
+        <member name="M:INSM.Template.Framework.v1.TemplateContext.DownloadProgressEvent(System.String,System.String,System.Single)">
+            <summary>
+            Called when a file is downloaded
+            </summary>
+            <param name="serializedFile"></param>
+        </member>
+        <member name="M:INSM.Template.Framework.v1.TemplateContext.FileAdded(System.Object)">
+            <summary>
+            Called when a file is added from the system
+            </summary>
+            <param name="serializedFile"></param>
+        </member>
+        <member name="M:INSM.Template.Framework.v1.TemplateContext.FileDeleted(System.Object)">
+            <summary>
+            Called when a file is deleted from the system
+            </summary>
+            <param name="serializedFile"></param>
+        </member>
+        <member name="M:INSM.Template.Framework.v1.TemplateContext.FileChanged(System.Object)">
+            <summary>
+            Called when a file is changed
+            </summary>
+            <param name="serializedFile"></param>
+        </member>
+        <member name="M:INSM.Template.Framework.v1.TemplateContext.#ctor(INSM.Template.Framework.v1.TemplateBase)">
+            <summary>
+            Default values for the dataset must be given in constructor (use static class).
+            </summary>
+            <param name="template"></param>
+            <param name="templateControl"></param>
+        </member>
+        <member name="M:INSM.Template.Framework.v1.TemplateContext.#ctor(INSM.Template.Framework.v1.TemplateBase,System.Object)">
+            <summary>
+            Default values for the dataset must be given in constructor (use static class).
+            </summary>
+            <param name="template"></param>
+            <param name="templateControl"></param>
         </member>
         <member name="T:INSM.Template.Framework.v1.TemplateBase">
             <summary>
@@ -1501,27 +1576,6 @@
             <summary>
             Called by when a synchronous command is sent to the template
             </summary>
-        </member>
-        <member name="M:INSM.Template.Framework.v1.TemplateBase.UploadFile(System.String)">
-            <summary>
-            Upload for to webplayer/webserver
-            </summary>
-            <param name="filename">Server filename of uploaded file</param>
-            <returns></returns>
-        </member>
-        <member name="M:INSM.Template.Framework.v1.TemplateBase.#ctor(INSM.Template.Framework.v1.TemplateDataSet)">
-            <summary>
-            Default values for the dataset must be given in the constructor (use static class).
-            </summary>
-            <param name="templateControl"></param>
-            <param name="defaultTemplateDataSet"></param>
-        </member>
-        <member name="M:INSM.Template.Framework.v1.TemplateBase.#ctor(System.Object,INSM.Template.Framework.v1.TemplateDataSet)">
-            <summary>
-            Default values for the dataset must be given in the constructor (use static class).
-            </summary>
-            <param name="templateControl"></param>
-            <param name="defaultTemplateDataSet"></param>
         </member>
         <member name="P:INSM.Template.Framework.v1.TemplateBase.TemplateFile">
             <summary>
@@ -1606,86 +1660,32 @@
             This is intended for final test stages in live environment.
             </summary>
         </member>
+        <member name="M:INSM.Template.Framework.v1.TemplateBase.UploadFile(System.String)">
+            <summary>
+            Upload for to webplayer/webserver
+            </summary>
+            <param name="filename">Server filename of uploaded file</param>
+            <returns></returns>
+        </member>
         <member name="P:INSM.Template.Framework.v1.TemplateBase.ParentTemplate">
             <summary>
             Returns the parent of this template if any. It's allways the parent that has access to the platform, not the sub templates.
             If this is the top parent template, this value should be null.
             </summary>
         </member>
-        <member name="T:INSM.Template.Framework.v1.TemplateContext">
+        <member name="M:INSM.Template.Framework.v1.TemplateBase.#ctor(INSM.Template.Framework.v1.TemplateDataSet)">
             <summary>
-            Extended Template API. Thic class can be used as a base class instead of Template.
+            Default values for the dataset must be given in the constructor (use static class).
             </summary>
-        </member>
-        <member name="M:INSM.Template.Framework.v1.TemplateContext.InvokeOnAllSubTemplates(System.Action{INSM.Template.Framework.v1.ITemplateContext})">
-            <summary>
-            Helper method for invoking method calls on all sub templates.
-            </summary>
-        </member>
-        <member name="M:INSM.Template.Framework.v1.TemplateContext.RetrieveDefaultTemplateData">
-            <summary>
-            Called by the ContentManager to ask the template for it's desired DataSet. The keys (with attributes) will describe the
-            requested variables and the values serves as default data.
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="M:INSM.Template.Framework.v1.TemplateContext.InsertTemplateData(System.Object)">
-            <summary>
-            Called by the player to fill the template with data and to update a running template with new data. The template should handle this gracefully.
-            </summary>
-            <param name="serializedDataSet"></param>
-        </member>
-        <member name="M:INSM.Template.Framework.v1.TemplateContext.InsertPlaylist(System.Object)">
-            <summary>
-            Called by the player to fill the template with the playlist it should display. The template should handle this gracefully.
-            Return true if the template can handle the playlist. Otherwise it should return false.
-            </summary>
-            <param name="serializedPlaylist"></param>
-            <returns>true if template accepts the playlist</returns>
-        </member>
-        <member name="M:INSM.Template.Framework.v1.TemplateContext.PropertyChange(System.Object)">
-            <summary>
-            Called when a propery is changed from the system
-            </summary>
-            <param name="serializedProperty"></param>
-        </member>
-        <member name="M:INSM.Template.Framework.v1.TemplateContext.DownloadProgressEvent(System.String,System.String,System.Single)">
-            <summary>
-            Called when a file is downloaded
-            </summary>
-            <param name="serializedFile"></param>
-        </member>
-        <member name="M:INSM.Template.Framework.v1.TemplateContext.FileAdded(System.Object)">
-            <summary>
-            Called when a file is added from the system
-            </summary>
-            <param name="serializedFile"></param>
-        </member>
-        <member name="M:INSM.Template.Framework.v1.TemplateContext.FileDeleted(System.Object)">
-            <summary>
-            Called when a file is deleted from the system
-            </summary>
-            <param name="serializedFile"></param>
-        </member>
-        <member name="M:INSM.Template.Framework.v1.TemplateContext.FileChanged(System.Object)">
-            <summary>
-            Called when a file is changed
-            </summary>
-            <param name="serializedFile"></param>
-        </member>
-        <member name="M:INSM.Template.Framework.v1.TemplateContext.#ctor(INSM.Template.Framework.v1.TemplateBase)">
-            <summary>
-            Default values for the dataset must be given in constructor (use static class).
-            </summary>
-            <param name="template"></param>
             <param name="templateControl"></param>
+            <param name="defaultTemplateDataSet"></param>
         </member>
-        <member name="M:INSM.Template.Framework.v1.TemplateContext.#ctor(INSM.Template.Framework.v1.TemplateBase,System.Object)">
+        <member name="M:INSM.Template.Framework.v1.TemplateBase.#ctor(System.Object,INSM.Template.Framework.v1.TemplateDataSet)">
             <summary>
-            Default values for the dataset must be given in constructor (use static class).
+            Default values for the dataset must be given in the constructor (use static class).
             </summary>
-            <param name="template"></param>
             <param name="templateControl"></param>
+            <param name="defaultTemplateDataSet"></param>
         </member>
         <member name="T:INSM.Template.Framework.v1.MatrixWarpSpace">
             <summary>

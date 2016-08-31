@@ -8,9 +8,14 @@
     <h1 id="title"></h1>
 
     <script>
-        insm.TemplateLoaded(function () {
+        if (insmTemplateDataSet != undefined) {
+            insmTemplateDataSet.TemplateLoaded(function () {
                 document.getElementById("title").innerHTML = "Hello world!";
             });
+        }
+        else {
+            document.getElementById("title").innerHTML = "[No player detected]";
+        }
     </script>
 </body>
 </html>

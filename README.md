@@ -69,12 +69,18 @@ An Instoremedia template must contain a start.xml file. The start.xml file has t
 
 ### Attributes (items)
 
+
+## _Template_
+
+### Attributes (items)
+
 _Orientation_ -	Value can be “Landscape” or “Portrait”
 
 _Resolution_ - Value is pixels [width]x[height] e.g. “1920x1080”
 
+_Category_ - Value is the category title
 
-## _Template_
+_Identity_ - Indentifier e.g. "Image" or "Movie"
 
 
 ## _Content_
