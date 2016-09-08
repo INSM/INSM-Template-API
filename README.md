@@ -60,19 +60,37 @@ Embed an image called Preview.jpg to display a static preview image.
 
 An Instoremedia template must contain a start.xml file. The start.xml file has three parts:
 
-* _Manifest_ - Standard meta data about this template file
+* _Manifest_ - Standard meta data about this file (template or plugin)
 * _Template_ - Standard meta data about the template
 * _Content_ - Custom defined meta data about the dynamic parameters the template expect from a user
 
 
 ## _Manifest_
 
-### Attributes (items)
+### Attributes (manatory items)
+
+_Title_ - Title of the template.
+
+_DisplayName_ - Display fiendly name of the template.
+
+_Description_ - Description of the template.
+
+_Version_ - Version of the template.
+
+_Type_ - Type of the template.
+
+_Vendor_ - Vendor information of the template.
+
+_StartFile_ - Start dll File of the template.
+
+_FileType_ - File Type of teh template.
+
+_FileHandler_ - FileHandler of the template.
 
 
 ## _Template_
 
-### Attributes (items)
+### Attributes (optional items)
 
 _Orientation_ -	Value can be “Landscape” or “Portrait”
 
@@ -80,7 +98,23 @@ _Resolution_ - Value is pixels [width]x[height] e.g. “1920x1080”
 
 _Category_ - Value is the category title
 
-_Identity_ - Indentifier e.g. "Image" or "Movie"
+_Identity_ - Identifier e.g. "Image" or "Movie". If specified templates with the same identity will be considered to have the same function. This is used as the TemplateName in the playlist data. If it is not present the manifest Title will be used instead. This may be used as an icon hint to override icons.
+
+_Transition_ - Default transition effect like "Fade".
+
+_IsTransitionsEnabled_ - Transitions enabled or not.
+
+_Duration_ - Duration value of transition.
+
+_IsDurationEnabled_ - Duration enabled or not.
+
+_AutoDuration_ - Auto duration is enabled or not.
+
+_IsAutoDurationOptionEnabled_ - Auto duration option enabled or not.
+
+_IsVolumeControlEnabled_ - Volume control enabled or not.
+
+_IsActiveXHost_ - Active XHost is enabled or not.
 
 
 ## _Content_
@@ -106,8 +140,11 @@ Visual type of parameter
        checkbox     - True/False option
        dropdown     - Option list (requires AvailableValues)
        browse       - Select a file
+	   slider		- For numeric values
        colorpicker  - Choose a color
 	   playlist		- Choose a sub playlist
+	   extendedtext - Rich text field
+	   datagrid     - Display a table
 
 
 ### Attributes (items)
@@ -135,4 +172,40 @@ _IsPreviewEnabled_ - True if automatic preview rendering should be attemted. If 
 _IsPreviewItemEnabled_ - True if an item should be used as preview for the whole template. In this case PreviewItem must be defined
 
 _PreviewItem_ - Key of dataset item to use as preview. This must be a file.
+
+_Color_  -   Color as hex value with A,R,G and B.
+
+_FileDescription_ - Kind of file with file extensions.
+
+_Rows_  -  Number of rows.
+
+_Font_  -   Name of the font.
+
+_FontBold_  - Bold font is enabled or not.
+
+_FontItalic_  - FontItalic is true or false.
+
+_FontSize_ - Selected size of the font.
+
+_TextAlign_  - Alignment of text left or right.
+
+_AllowEdit_ - Allow edit true or false.
+
+_Fonts_ - All fonts options.
+
+_FontSizes_ - All font size options.
+
+_DropShadow_ - enabled or not.
+
+_DataColumnDisplayName.1_ - datagrid column display name.
+
+_DataColumnKey.1_ - datagrid column display key.
+
+_DataColumnRequired.1_ - datagrid column required or not.
+
+_DataColumnRequiredMessage.1_ - datagrid column required message.
+
+
+
+
 
