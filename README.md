@@ -75,6 +75,8 @@ _DisplayName_ - Display fiendly name of the template.
 
 _Description_ - Description of the template.
 
+_Category_ - Value is the category title.
+
 _Version_ - Version of the template.
 
 _Type_ - Type of the template.
@@ -95,8 +97,6 @@ _FileHandler_ - FileHandler of the template.
 _Orientation_ -	Value can be “Landscape” or “Portrait”
 
 _Resolution_ - Value is pixels [width]x[height] e.g. “1920x1080”
-
-_Category_ - Value is the category title
 
 _Identity_ - Identifier e.g. "Image" or "Movie". If specified templates with the same identity will be considered to have the same function. This is used as the TemplateName in the playlist data. If it is not present the manifest Title will be used instead. This may be used as an icon hint to override icons.
 
