@@ -79,13 +79,13 @@ _Category_ - Value is the category title.
 
 _Version_ - Version of the template.
 
-_Type_ - Type of the template.
+_Type_ - Type should be "Template" for templates.
 
-_Vendor_ - Vendor information of the template.
+_Vendor_ - Vendor of the template.
 
-_StartFile_ - Start dll File of the template.
+_StartFile_ - Start file of the template.
 
-_FileType_ - File Type of teh template.
+_FileType_ - File Type of the template.
 
 _FileHandler_ - FileHandler of the template.
 
