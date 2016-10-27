@@ -9,9 +9,9 @@
 
     <script>
         if (insmTemplateDataSet != undefined) {
-            insmTemplateDataSet.TemplateLoaded(function () {
+            insmTemplateDataSet.TemplateLoaded = function () {
                 document.getElementById("title").innerHTML = "Hello world!";
-            });
+            };
         }
         else {
             document.getElementById("title").innerHTML = "[No player detected]";
