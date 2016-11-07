@@ -67,7 +67,9 @@ An Instoremedia template must contain a start.xml file. The start.xml file has t
 
 ## _Manifest_
 
-### Attributes (manatory items)
+This dataset contains defined information about the file. Only defined item ids are permitted.
+
+### Item Ids (Mandatory)
 
 _Title_ - Title of the template.
 
@@ -92,13 +94,17 @@ _FileHandler_ - FileHandler of the template.
 
 ## _Template_
 
-### Attributes (optional items)
+This dataset contains defined information about the template. Only defined item ids are permitted.
+
+### Item Ids (Optional)
 
 _Orientation_ -	Value can be “Landscape” or “Portrait”
 
 _Resolution_ - Value is pixels [width]x[height] e.g. “1920x1080”
 
 _Identity_ - Identifier e.g. "Image" or "Movie". If specified templates with the same identity will be considered to have the same function. This is used as the TemplateName in the playlist data. If it is not present the manifest Title will be used instead. This may be used as an icon hint to override icons.
+
+_UrlItem_ - Value is the content dataset item id with an url from which the template should be loaded. 
 
 _Transition_ - Default transition effect like "Fade".
 
@@ -118,6 +124,8 @@ _IsActiveXHost_ - Active XHost is enabled or not.
 
 
 ## _Content_
+
+This dataset contains user defined configuration options for the template. The item Ids user defined but only defined attributes are permitted. 
 
 ### Type
 Type of parameter
@@ -147,7 +155,7 @@ Visual type of parameter
 	   datagrid     - Display a table
 
 
-### Attributes (items)
+### Attributes (Optional)
 
 _DisplayName_ - Name of parameter to be displayd to the user
 
@@ -171,7 +179,7 @@ _IsPreviewEnabled_ - True if automatic preview rendering should be attemted. If 
 
 _IsPreviewItemEnabled_ - True if an item should be used as preview for the whole template. In this case PreviewItem must be defined
 
-_PreviewItem_ - Key of dataset item to use as preview. This must be a file.
+_PreviewItem_ - Key of dataset item id to use as preview. This must be a file.
 
 _Color_  -   Color as hex value with A,R,G and B.
 
