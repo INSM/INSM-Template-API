@@ -9,17 +9,12 @@
 
     <script>
     if (typeof insmTemplateDataSet == 'undefined') {
-		insmTemplateDataSet = {} //Needed when running in HTMLPlayer from an external link
+		insmTemplateDataSet = {}; //Needed when running in HTMLPlayer from an external link
 	}	
 		
-	if (insmTemplateDataSet != undefined) {
-		insmTemplateDataSet.TemplateLoaded = function () {
+	insmTemplateDataSet.TemplateLoaded = function () {
 			document.getElementById("title").innerHTML = "Hello world!";
-		};
-	}
-	else {
-		document.getElementById("title").innerHTML = "[No player detected]";
-	}
+	};
     </script>
 </body>
 </html>
