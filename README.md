@@ -153,6 +153,7 @@ Visual type of parameter
 	   playlist		- Choose a sub playlist
 	   extendedtext - Rich text field
 	   datagrid     - Display a table
+	   weather      - Display an autocomplete text field for weather location 
 
 
 ### Attributes (Optional)
