@@ -42,8 +42,9 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="INSM.Template.Framework.v1">
-      <HintPath>..\..\..\INSM\Platform\Source\3.3\INSM.Template.Framework.WPF\bin\Debug\INSM.Template.Framework.v1.dll</HintPath>
+    <Reference Include="INSM.Template.Framework.v1, Version=3.3.0.0, Culture=neutral, PublicKeyToken=84e645bbe3d212c4, processorArchitecture=MSIL">
+      <HintPath>..\packages\INSM.Template.Framework.v1.3.3.9999\lib\net35\INSM.Template.Framework.v1.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -62,6 +63,9 @@
     <Content Include="start.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

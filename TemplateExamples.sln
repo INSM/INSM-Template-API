@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "INSM.Example.Template.Media", "INSM.Example.Template.Media\INSM.Example.Template.Media.csproj", "{9D227F46-C360-4243-9F37-759F6586AB55}"
 EndProject
@@ -21,7 +21,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "INSM.Example.Template.WarpS
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2526F77F-2C59-42EF-8BA5-D766A9A67BF0}"
 	ProjectSection(SolutionItems) = preProject
-		INSM.Template.Framework.v1.dll = INSM.Template.Framework.v1.dll
 		README.md = README.md
 	EndProjectSection
 EndProject
