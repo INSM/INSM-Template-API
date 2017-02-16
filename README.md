@@ -162,7 +162,9 @@ _DisplayName_ - Name of parameter to be displayd to the user
 
 _DisplayGroupName_ - Name of visual grouping of items
 
-_DisplayGroupId_ - Id of visual grouping of items (integer)
+_DisplayGroupIndex_ - Order of visual group (integer)
+
+_DisplayGroupCollapsed_ - Indication of a group to default to being collapsed
 
 _Required_ - True if this attribute is required from the user
 
