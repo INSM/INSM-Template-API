@@ -1,0 +1,70 @@
+###############################################################################
+# Set default behavior to automatically normalize line endings.
+###############################################################################
+* text=auto
+
+
+###############################################################################
+# Source files
+#
+###############################################################################
+*.cs		text
+*.py		text
+*.css		text
+*.java		text
+*.html		text
+*.htm       text
+*.cshtml	text
+*.scss		text
+*.sql		text
+*.cmd		text
+*.bat		text
+*.xml		text
+*.xsl       text
+*.m			text
+*.h			text
+*.js		text
+*.svg		text
+*.config    text
+*.aspx      text
+*.asmx      text
+*.ascx      text
+*.content   text
+*.less      text
+*.dtd       text
+*.plist     text
+*.tt        text
+*.md        text
+*.wxi       text
+*.wxs       text
+
+###############################################################################
+# Project files
+#
+###############################################################################
+*.sln		text
+*.csproj	text
+*.vbproj	text
+*.vcxproj	text
+*.vcproj	text
+*.dbproj	text
+*.fsproj	text
+*.lsproj	text
+*.wixproj	text
+*.modelproj	text
+*.sqlproj	text
+*.wwaproj	text
+
+###############################################################################
+# behavior for binary files
+#
+###############################################################################
+*.jpg	binary
+*.png	binary
+*.gif	binary
+*.ico   binary
+*.exe	binary
+*.dll   binary
+*.sdf   binary
+*.rtf   binary
+*.bmp   binary
