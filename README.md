@@ -120,6 +120,8 @@ _IsAutoDurationOptionEnabled_ - Auto duration option enabled or not.
 
 _IsVolumeControlEnabled_ - Volume control enabled or not.
 
+_IsVolumeMuted_ - default volume should be muted or not.
+
 _IsActiveXHost_ - Active XHost is enabled or not.
 
 
